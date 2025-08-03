@@ -1,24 +1,32 @@
 # Credit_Risk_Loan_Default_Prediction
 
-Loan Default Risk Prediction
-Machine Learning Model to Identify High-Risk Borrowers
+🔍 Loan Default Prediction Using Logistic Regression & Random Forest
+This project focuses on building a robust machine learning pipeline to predict loan default risk using real-world credit data. It compares the performance of Logistic Regression and Random Forest classifiers, with emphasis on class imbalance handling, feature impact analysis, and threshold tuning to optimize business-relevant metrics like recall and AUC.
 
-Project Overview
-Developed a Random Forest classifier achieving 94% accuracy (AUC: 0.98) to predict loan defaults, enabling lenders to mitigate financial risks through data-driven decisions.
+📊 Key Highlights:
+Exploratory Data Analysis (EDA):
+Revealed that renters with high loan-to-income ratios and interest rates were most prone to default. Correlation and coefficient analysis guided feature importance and risk segmentation.
 
-Key Features
-EDA Insights: Identified renters with high loan-to-income ratios (0.38 correlation) and elevated interest rates (0.34) as highest-risk segments.
+Class Imbalance Strategy:
+Addressed 22% class imbalance using RandomOverSampler, leading to a +42% recall improvement in Logistic Regression and +23% gain in Random Forest recall for defaulters.
 
-Class Imbalance Fix: Applied SMOTE-ENN to boost minority class recall by 22% (69% → 91%).
+Model Performance:
 
-Feature Importance: Top predictors: loan_percent_income (27% impact), person_income (18.5%), and loan_grade_D (13.3%).
+Random Forest: 92% Accuracy, 0.93 ROC-AUC
 
-Technology Used
-Python Libraries: Scikit-learn, Pandas, Seaborn, imbalanced-learn
+Logistic Regression: 75% Accuracy, 0.87 ROC-AUC
 
-Methods: Logistic Regression (baseline), Random Forest, Hyperparameter Tuning (GridSearchCV)
+Precision-Recall analysis and custom thresholds used to align with high-risk business contexts.
 
-Data Prep: Median imputation, one-hot encoding, feature scaling
+End-to-End Pipeline:
+
+Missing value imputation
+
+Categorical encoding
+
+Feature scaling
+
+Learning curves, ROC plots, and feature importance visualization
 
 🚀 Business Impact
 Proposed risk-based pricing strategies for high-risk borrowers (e.g., renters).
